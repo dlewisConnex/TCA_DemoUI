@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Socket.IO Client</title>
+    <style>
+        body {
+            background-color: slateblue;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 200vh;
+            margin: 0;
+            overflow-y: scroll;
+        }
+        .boxes-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+        textarea {
+            width: 100%;
+            box-sizing: border-box;
+            resize: both; 
+            overflow-y: scroll; 
+            min-height: 100px; 
+        }
+        button {
+            display: block;
+            margin: 10px;
+        }
+        #jsonInput {
+            height: 200px; 
+        }
+    </style>
+</head>
+<body>
+    <h1>Config:</h1>
+    <textarea id="jsonInput" rows="30" cols="100"></textarea>
+    <button onclick="runTTA()">Run TTA</button>
+    <div class="boxes-container">
+        <div>
+            <h1>Transcript Output:</h1>
+            <textarea id="jsonOutput" rows="40" cols="50"></textarea>
+        </div>
+        <div>
+            <h1>Analysis:</h1>
+            <textarea id="analysisOutput" rows="40" cols="50"></textarea>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.1.2/socket.io.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

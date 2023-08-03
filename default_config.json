@@ -1,0 +1,22 @@
+{
+    "option": "call_path_explorer",
+    "test_account_info":
+        [
+            {"description": "membership number", "value": "228228", "applicability": ["global"]},
+            {"description": "access code", "value": "9998", "applicability": ["global"]},
+            {"description": "savings account id", "value": "00", "applicability": ["savings_account_balance"]},
+            {"description": "pay from account id", "value": "00", "applicability": ["loan_payment", "external_loan_payment"]},
+            {"description": "payment amount", "value": "$10", "applicability": ["loan_payment", "external_loan_payment"]},
+            {"description": "external account number to transfer to", "value": "62151", "applicability": ["external_loan_payment"]},
+            {"description": "account initials", "value": "g l", "applicability": ["external_loan_payment"]},
+            {"description": "external loan id to transfer to", "value": "00", "applicability": ["external_loan_payment"]},
+            {"description": "savings account id to make the advance to", "value": "00", "applicability": ["loan_advance"]},
+            {"description": "advance amount", "value": "$200", "applicability": ["loan_advance"]}
+        ],
+    "application_type": "credit_union",
+    "task_list": ["savings_account_balance"],
+    "task_instructions": {
+        "savings_account_balance": {"goal": "get your savings account balance.", "expected_result": "the balance is $26,545.53"}
+    },
+    "custom_instructions": ["Do not say tellerphone self-service.", "If prompted for initials, your response should be only the initials.", "If a request fails, just end the call", "Do not ask for a representative", "If you're asked if you want something repeated, say no.", "Always use complete sentences and natural language. Never give a number on its own.",  "If the system behaves strangely, hang up the call."]
+}
